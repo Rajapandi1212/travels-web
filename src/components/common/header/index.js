@@ -10,6 +10,7 @@ const Header = () => {
         sx={{
           bgcolor: (theme) => theme.palette.grey[50],
           boxShadow: "0px 1px 2px 0px #d8fff3c2, 0px 1px 1px 0px #e5f2ee;",
+          zIndex: 3,
         }}
       >
         <Toolbar
