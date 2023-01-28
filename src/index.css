@@ -29,3 +29,54 @@ body {
     background-position: left;
   }
 }
+
+.popin_ani {
+  animation: pop 2s linear 1;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.6);
+  }
+
+  25% {
+    transform: scale(0.3);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  75% {
+    transform: scale(0.9);
+  }
+}
+
+.slidetop_ani {
+  animation: slidetop 1s ease-in 1;
+}
+
+@keyframes slidetop {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  90% {
+    transform: translateY(-50%);
+  }
+}
+
+.reveal_ani {
+  color: white;
+  animation: reveal 2s ease-in 1;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}

@@ -1,9 +1,8 @@
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Img1 from "../../assets/images/landingpage/img_1.webp";
 import Img2 from "../../assets/images/landingpage/img_2.webp";
-import Header from "../common/header";
 
 const Carousel = () => {
   const [currentImage, setCurrentImage] = useState(true);
@@ -18,7 +17,7 @@ const Carousel = () => {
       sx={{
         height: {
           xs: "70vh",
-          md: "calc(100vh)",
+          md: "calc(100vh - 64px)",
         },
         maxHeight: 700,
         bgcolor: "#d5e8e526",
@@ -27,22 +26,50 @@ const Carousel = () => {
       }}
     >
       <motion.div
-        style={{ backgroundImage: `url(${currentImage ? Img1 : Img2})` }}
+        style={{
+          backgroundImage: `url(${currentImage ? Img1 : Img2})`,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
         className="carousel_img"
         animate={{ scale: [1, 1.05, 1] }}
         transition={{ duration: 16, repeat: Infinity }}
       />
-      <Header />
-      <p
+
+      <Grid
+        container
         style={{
-          textAlign: "center",
-          color: "white",
-          top: "50%",
+          height: "100%",
           position: "absolute",
+          top: 0,
+          left: 0,
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
-        hello
-      </p>
+        <Grid
+          item
+          xs={11}
+          md={5}
+          sx={{
+            p: `2.5vh 1rem 2.5vh 1rem`,
+          }}
+        >
+          <Box
+            sx={{
+              textAlign: "center",
+              color: "white",
+              maxHeight: "70%",
+              // background: "rgba(0, 0, 0, 0.5)",
+              // backdropFilter: "blur(2px)",
+            }}
+            className="popin_ani"
+          >
+            hello hdfjisdpjoifdjpo dfsihijpdsfjpodfspojdfs ih;dsfihdfsihdsfhi
+          </Box>
+        </Grid>
+      </Grid>
     </Box>
   );
 };
