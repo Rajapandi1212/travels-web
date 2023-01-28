@@ -1,16 +1,7 @@
-import { motion } from "framer-motion";
+import AnimatedContainer from "../components/common/containers/AnimatedContainer";
 
 const AboutPage = () => {
-  return (
-    <motion.div
-      initial={{ opacity: 0.1 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 3 }}
-    >
-      this is about page
-    </motion.div>
-  );
+  return <AnimatedContainer>this is about page</AnimatedContainer>;
 };
 
 export default AboutPage;
