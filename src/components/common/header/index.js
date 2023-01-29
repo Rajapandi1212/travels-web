@@ -1,9 +1,10 @@
-import { AppBar, Avatar, Toolbar } from "@mui/material";
+import { AppBar, Avatar, Toolbar, useTheme } from "@mui/material";
 import { Box } from "@mui/system";
 import { Link, NavLink } from "react-router-dom";
 import "../../../styles/components/Header.css";
 import Logo from "../../../assets/images/logo/logo1.svg";
 const Header = () => {
+  const theme =useTheme()
   const NAVITEM = [
     { item: "Home", link: "/" },
     { item: "About", link: "/about" },
@@ -12,25 +13,27 @@ const Header = () => {
     textDecoration: "none",
     fontSize: "large",
     letterSpacing: 3,
-    fontFamily: " Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif",
-    backgroundImage: "linear-gradient(120deg, blue, blue, blue, blue,blue,blue,blue, green, green,green, green,green) ",
-    animation:" button-animation 0.65s 0.30s ease-out ",
-    backgroundSize: 100,
-    backgroundRepeat: "repeat",
-    webkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-    mozBackgroundClip: "text",
-    mozTextFillColor: "transparent",
-    textDecoration:'underline',
-    borderBottom:" 2px solid blue"
+    // fontFamily: " Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif",
+    // backgroundImage: "linear-gradient(120deg, blue, blue, blue, blue,blue,blue,blue, green, green,green, green,green) ",
+    // animation:" button-animation 0.65s 0.30s ease-out ",
+    // backgroundSize: 100,
+    // backgroundRepeat: "repeat",
+    // webkitBackgroundClip: "text",
+    // WebkitTextFillColor: "transparent",
+    // mozBackgroundClip: "text",
+    // mozTextFillColor: "transparent",
+    // textDecoration:'underline blue',
+    // borderBottom:" 2px solid blue",
+    // textShadow:" 0 0 1px blue"
+    color:theme.palette.primary.dark,
 
   };
   const NonActiveClass = {
     textDecoration: "none", 
     fontSize: "large",
-    fontFamily: " Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif",
+    // fontFamily: " Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif",
     letterSpacing: 3,
-    color:"black",
+    color:"#565a61",
 
   };
   return (
@@ -73,7 +76,7 @@ const Header = () => {
                 style={({ isActive }) =>
                   isActive ? (ActiveClass) : (NonActiveClass)
                 }
-               
+               className="primary_font"
               >
                 {item}
               </NavLink>

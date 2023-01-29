@@ -13,6 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   font-family: "Telex", sans-serif;
+  text-underline-offset: 8px;
 }
 .primary_font {
   font-family: "Catamaran", sans-serif;
