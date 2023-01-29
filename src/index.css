@@ -12,6 +12,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+  font-family: "Telex", sans-serif;
+}
+.primary_font {
+  font-family: "Catamaran", sans-serif;
+}
+.secondary_font {
+  font-family: "Alegreya", serif;
 }
 
 .carousel_img {
