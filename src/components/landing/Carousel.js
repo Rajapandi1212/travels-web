@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Img1 from "../../assets/images/landingpage/img_1.webp";
@@ -51,7 +51,7 @@ const Carousel = () => {
         <Grid
           item
           xs={11}
-          md={5}
+          md={6}
           sx={{
             p: `2.5vh 1rem 2.5vh 1rem`,
           }}
@@ -66,7 +66,29 @@ const Carousel = () => {
             }}
             className="popin_ani"
           >
-            hello hdfjisdpjoifdjpo dfsihijpdsfjpodfspojdfs ih;dsfihdfsihdsfhi
+            <Typography
+              variant="subtitle1"
+              gutterBottom
+              sx={{
+                fontFamily: "'Alegreya', serif",
+              }}
+              className="slidetop_ani"
+            >
+              Welcome to Ocean Horse
+            </Typography>
+            <Typography
+              variant="h2"
+              sx={{
+                fontFamily: "'Catamaran', sans-serif",
+              }}
+              className="slidebottom_ani"
+            >
+              Explore the{" "}
+              <span className="reveal_ani" style={{ animationDelay: "1s" }}>
+                Andaman
+              </span>{" "}
+              with us.
+            </Typography>
           </Box>
         </Grid>
       </Grid>
